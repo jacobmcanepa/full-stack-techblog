@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const User = require('./User');
 
 class Post extends Model {}
 
@@ -15,10 +16,14 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    post_body: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: User,
         key: 'id'
       }
     }
