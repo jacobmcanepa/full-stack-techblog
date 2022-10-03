@@ -5,3 +5,13 @@
 .nav-font {
   font-size: 25px;
 }
+
+.post-link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.post-link:hover {
+  text-decoration: none;
+}

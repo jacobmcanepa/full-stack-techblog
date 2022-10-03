@@ -1,1 +1,16 @@
-<div>You are on the homepage</div>
+<ul class="container my-4">
+  {{#each posts as |post|}}
+  <li class="bg-secondary text-light rounded py-1 my-2">
+    <div class="row pl-3 pt-2">
+      <div class="col">
+        <a href="#" class="post-link"><span class="h3">{{post.title}}</span></a>
+      </div>
+    </div>
+    <div class="row pl-3 pb-2">
+      <div class="col">
+        by <a href="#" class="post-link">{{post.user.username}}</a> at {{post.created_at}}
+      </div>
+    </div>
+  </li>
+  {{/each}}
+</ul>
