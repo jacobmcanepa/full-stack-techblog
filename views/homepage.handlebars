@@ -3,12 +3,14 @@
   <li class="bg-info text-light rounded py-1 my-2">
     <div class="row pl-3 pt-2">
       <div class="col">
-        <a href="#" class="post-link"><span class="h3">{{post.title}}</span></a>
+        <a href="/posts/{{post.id}}" class="post-link"><span class="h3">{{post.title}}</span></a>
       </div>
     </div>
     <div class="row pl-3 pb-2">
       <div class="col">
         by <a href="#" class="post-link">{{post.user.username}}</a> at {{post.created_at}}
+        |
+        <a href="/posts/{{post.id}}" class="post-link">{{post.comments.length}} comment(s)</a>
       </div>
     </div>
   </li>
