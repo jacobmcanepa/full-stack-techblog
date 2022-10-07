@@ -32,6 +32,7 @@
     {{/each}}
   </section>
 
+  {{#if loggedIn}}
   <form class="container mt-4" id="comment-form">
     <div>
       <textarea name="comment-body"></textarea>
@@ -40,7 +41,10 @@
       <button type="submit" class="btn btn-primary">Add Comment</button>
     </div>
   </form>
+  {{/if}}
 </article>
 
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
+{{/if}}
 
