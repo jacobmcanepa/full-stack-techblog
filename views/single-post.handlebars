@@ -1,0 +1,46 @@
+<article class="mt-5 mb-1">
+  <section class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="post-title">{{post.title}}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-black-50 border-top">
+        Posted on {{post.created_at}} by {{post.user.username}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col border-bottom">
+        <p>{{post.post_body}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-4">
+    {{#each post.comments}}
+    <div class="row comment py-2">
+      <div class="col-12 text-black-50">
+        {{user.username}} on {{created_at}}
+      </div>
+      <div class="col">
+        {{comment_text}}
+      </div>
+    </div>
+    {{/each}}
+  </section>
+
+  <form class="container mt-4" id="comment-form">
+    <div>
+      <textarea name="comment-body"></textarea>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Add Comment</button>
+    </div>
+  </form>
+</article>
+
+<script src="/javascript/comment.js"></script>
+

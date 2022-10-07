@@ -6,8 +6,17 @@ html, body {
   height: 100%;
 }
 
+textarea {
+  width: 600px;
+  height: 150px;
+}
+
 .nav-font {
   font-size: 25px;
+}
+
+.post-title {
+  font-size: 45px
 }
 
 .post-link {
@@ -22,4 +31,8 @@ html, body {
 
 .test-border {
   border: 5px red solid;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fff5eb;
 }
