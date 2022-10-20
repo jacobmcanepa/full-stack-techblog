@@ -8,9 +8,9 @@
     </div>
     <div class="row pl-3 pb-2">
       <div class="col">
-        by <a href="#" class="post-link">{{post.user.username}}</a> at {{post.created_at}}
+        by <a href="#" class="post-link">{{post.user.username}}</a> at {{format_date post.created_at}}
         |
-        <a href="/posts/{{post.id}}" class="post-link">{{post.comments.length}} comment(s)</a>
+        <a href="/posts/{{post.id}}" class="post-link">{{post.comments.length}} {{format_plural "comment" comments.length}}</a>
       </div>
     </div>
   </li>
