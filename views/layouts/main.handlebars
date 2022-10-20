@@ -22,9 +22,11 @@
           <li class="nav-item active">
             <a class="nav-link pl-2" href="/"><span class="nav-font">Home</span> <span class="sr-only">(current)</span></a>
           </li>
+          {{#if loggedIn}}
           <li class="nav-item">
             <a class="nav-link pl-2" href="/dashboard"><span class="nav-font">Dashboard</span></a>
           </li>
+          {{/if}}
         </ul>
         {{#if loggedIn}}
         <a class="nav-item nav-link pl-2" id="logout" href="/logout"><span class="nav-font">Logout</span></a>

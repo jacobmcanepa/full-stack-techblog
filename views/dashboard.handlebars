@@ -1,0 +1,38 @@
+<div class="container">
+  <form class="my-5" id="add-post">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Post Title" id="post-title">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" rows="8" placeholder="Type content here..." id="post-content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Post</button>
+  </form>
+
+  {{#if posts.length}}
+  <div>
+    <h2 class="pb-3">Your posts:</h2>
+    <ul>
+      {{#each posts as |post|}}
+      <li class="bg-info text-light rounded py-1 my-2">
+        <div class="row pl-3 pt-2">
+          <div class="col">
+            <a href="/posts/{{post.id}}" class="post-link"><span class="h3">{{post.title}}</span></a>
+          </div>
+        </div>
+        <div class="row pl-3 pb-2">
+          <div class="col">
+            by <a href="#" class="post-link">{{post.user.username}}</a> at {{format_date post.created_at}}
+            |
+            <a href="/posts/{{post.id}}" class="post-link">{{post.comments.length}} {{format_plural "comment" comments.length}}</a>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+
+</div>
+
+<script src="/javascript/add-post.js"></script>
