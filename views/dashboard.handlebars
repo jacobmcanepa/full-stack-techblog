@@ -25,6 +25,9 @@
             by <a href="#" class="post-link">{{post.user.username}}</a> at {{format_date post.created_at}}
             |
             <a href="/posts/{{post.id}}" class="post-link">{{post.comments.length}} {{format_plural "comment" comments.length}}</a>
+            <p class="mb-0">
+              <a href="/dashboard/edit/{{post.id}}" class="post-link">Edit Post</a>
+            </p>
           </div>
         </div>
       </li>
