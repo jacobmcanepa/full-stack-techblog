@@ -23,7 +23,7 @@
     {{#each post.comments}}
     <div class="row comment py-2">
       <div class="col-12 text-black-50">
-        {{user.username}} on {{created_at}}
+        {{user.username}} on {{format_date created_at}}
       </div>
       <div class="col">
         {{comment_text}}
