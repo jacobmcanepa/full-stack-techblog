@@ -17,7 +17,7 @@
   Make sure to create a .env file for MySQL info and session secret.
 
   ## Links
-  https://intense-chamber-35539.herokuapp.com/
+  https://jc-techblog.herokuapp.com/
 
   ![App Screenshot](./images/screenshot.png)
 
@@ -25,5 +25,7 @@
   Github: https://github.com/jacobmcanepa
   
   Email: jacobmcanepa@gmail.com
+
+  LinkedIn: https://www.linkedin.com/in/jacob-canepa-568740198/
   
   
